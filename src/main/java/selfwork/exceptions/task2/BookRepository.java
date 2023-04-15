@@ -13,7 +13,7 @@ public class BookRepository {
 
     public void delete(String isbn) throws NoBookFoundException {
         for (Book book : books) {
-            if (book.getIsbn().equals(isbn)) {
+            if (book.getId().equals(isbn)) {
                 books.remove(book);
                 return;
             }
@@ -21,12 +21,13 @@ public class BookRepository {
         throw new NoBookFoundException("Can't delete book with isbn " + isbn);
     }
 
-    public List<Book> findByIsbn(String isbn) throws NoBookFoundException {
+    public Book findByIsbn(String isbn) throws NoBookFoundException {
         for (Book book : books) {
-            if (book.getIsbn().equals(isbn)) {
-
+            if (book.getId().equals(isbn)) {
+                return book;
             }
         }
+        throw new NoBookFoundException("Can't find book with isbn: " + isbn);
     }
 
     public List<Book> findByName(String name) throws NoBookFoundException {

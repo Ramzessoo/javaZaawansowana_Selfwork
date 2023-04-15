@@ -3,7 +3,7 @@ package selfwork.exceptions.task2;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoBookFoundException {
         BookRepository bookRepository = new BookRepository();
         bookRepository.add(new Book("Harry Potter Part 1", "J.K.Rowlling","3323-434ds"));
         bookRepository.add(new Book("Harry Potter Part 2", "J.K.Rowlling", "534re-dsrt"));

@@ -28,12 +28,12 @@ public class Book {
         this.author = author;
     }
 
-    public String getIsbn() {
+    public String getId() {
         return isbn;
     }
 
-    public void setId(String isbn) {
-        this.isbn = isbn;
+    public void setId(String id) {
+        this.isbn = id;
     }
 
     @Override
