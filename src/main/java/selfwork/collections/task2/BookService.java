@@ -91,10 +91,10 @@ public class BookService {
 
 
     public List<Book> sortByTitleAsc() {
-        Collections.sort(books, new Comparator<Book>() {
+        books.sort(new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {
-                return (int)o1.getTitle().charAt(0) - (int)o2.getTitle().charAt(0);
+                return (int) o1.getTitle().charAt(0) - (int) o2.getTitle().charAt(0);
             }
         });
         return books;
