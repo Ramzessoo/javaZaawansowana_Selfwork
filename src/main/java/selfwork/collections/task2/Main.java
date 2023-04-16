@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Author mickiewicz = new Author( "Adam", "Mickiewicz", "M");
-        Author slowacki = new Author("Julisz", "Słowacki","M");
+        Author mickiewicz = new Author("Adam", "Mickiewicz", "M");
+        Author slowacki = new Author("Julisz", "Słowacki", "M");
         Author orzeszkowa = new Author("Eliza", "Orzeszkowa", "K");
         Author sienkiewicz = new Author("Henryk", "Siekiewicz", "M");
 
@@ -29,14 +29,15 @@ public class Main {
         bookService.add(potop);
         bookService.add(nadNiemnem);
 
-        System.out.println(bookService.getAll());
-        System.out.println(bookService.findByAuthor(mickiewicz));
-        System.out.println(bookService.findMostExpensiveBook());
+        System.out.println("Get All: " + bookService.getAll());
+        System.out.println("By author - \"Adam Mickiewicz\": " + bookService.findByAuthor(mickiewicz));
+        System.out.println("The most expensive: " + bookService.findMostExpensiveBook());
         System.out.println();
-        System.out.println(bookService.sortByTitleAsc());
+        System.out.println("Sorted asc: " + bookService.sortByTitleAsc());
         System.out.println();
-        System.out.println(bookService.getUniqalPairs());
+        System.out.println("Maps of uniqal Genre and Books: " + bookService.getUniqalPairs());
         System.out.println();
-        System.out.println(bookService.bookStack());
+        System.out.println("Stack: " + bookService.bookStack());
+        System.out.println("Hashcode: " + bookService.hashCode());
     }
 }
